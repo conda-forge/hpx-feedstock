@@ -1,18 +1,5 @@
-diff --git a/libs/full/parcelset_base/include/hpx/parcelset_base/parcelset_base_fwd.hpp b/libs/full/parcelset_base/include/hpx/parcelset_base/parcelset_base_fwd.hpp
-index 4d86b68e..8d41f6f8 100644
---- a/libs/full/parcelset_base/include/hpx/parcelset_base/parcelset_base_fwd.hpp
-+++ b/libs/full/parcelset_base/include/hpx/parcelset_base/parcelset_base_fwd.hpp
-@@ -14,7 +14,7 @@
- namespace hpx::parcelset {
- 
-     class HPX_EXPORT parcelport;
--    class HPX_EXPORT locality;
-+    class /* HPX_EXPORT */ locality;
-     class HPX_EXPORT parcel;
- 
-     /// The type of a function that can be registered as a parcel write handler
 diff --git a/libs/core/compute_local/include/hpx/compute_local/host/numa_binding_allocator.hpp b/libs/core/compute_local/include/hpx/compute_local/host/numa_binding_allocator.hpp
-index 2b2950c5..70e0b759 100644
+index 2b2950c55f..70e0b75958 100644
 --- a/libs/core/compute_local/include/hpx/compute_local/host/numa_binding_allocator.hpp
 +++ b/libs/core/compute_local/include/hpx/compute_local/host/numa_binding_allocator.hpp
 @@ -309,7 +309,7 @@ namespace hpx { namespace compute { namespace host {
@@ -37,3 +24,25 @@ index 68afa3c80a..928a434143 100644
            : empty_(true)
          {
          }
+diff --git a/libs/full/parcelset_base/include/hpx/parcelset_base/locality.hpp b/libs/full/parcelset_base/include/hpx/parcelset_base/locality.hpp
+index 19de48689e..0429840ceb 100644
+--- a/libs/full/parcelset_base/include/hpx/parcelset_base/locality.hpp
++++ b/libs/full/parcelset_base/include/hpx/parcelset_base/locality.hpp
+@@ -15,6 +15,8 @@
+ #include <hpx/modules/iterator_support.hpp>
+ #include <hpx/modules/serialization.hpp>
+ 
++#include <hpx/parcelset_base/parcelset_base_fwd.hpp>
++
+ #include <map>
+ #include <memory>
+ #include <string>
+@@ -27,7 +29,7 @@
+ namespace hpx { namespace parcelset {
+ 
+     //////////////////////////////////////////////////////////////////////////
+-    class HPX_EXPORT locality
++    class locality
+     {
+         template <typename Impl>
+         class impl;
