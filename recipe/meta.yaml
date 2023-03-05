@@ -1,5 +1,5 @@
-{% set version = "1.8.1" %}
-{% set build_nr = 1 %}
+{% set version = "v1.9.0-rc1" %}
+{% set build_nr = 0 %}
 
 
 package:
@@ -8,9 +8,9 @@ package:
 
 source:
   url: https://github.com/STEllAR-GROUP/hpx/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 2fc4c10f55e2e6bcdc6f6ff950e26c6d8e218e138fdbd885ee71ccf5c5549054
-  patches:
-    - patch/hpx-{{ version }}.patch
+  sha256: d968dad740a30a6e3bad5d2d71262182401ab50508b149a3ed584b2699baaed5
+  # patches:
+  #   - patch/hpx-{{ version }}.patch
 
 build:
   number: {{ build_nr }}
