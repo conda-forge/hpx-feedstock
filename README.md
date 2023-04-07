@@ -1,11 +1,11 @@
-About hpx
-=========
+About hpx-feedstock
+===================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/hpx-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/STEllAR-GROUP/hpx
 
 Package license: BSL-1.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/hpx-feedstock/blob/main/LICENSE.txt)
 
 Summary: The C++ Standard Library for Parallelism and Concurrency
 
