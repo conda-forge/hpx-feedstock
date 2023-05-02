@@ -1,4 +1,4 @@
-{% set version = "1.8.1" %}
+{% set version = "1.9.0" %}
 
 
 package:
@@ -6,13 +6,13 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/STEllAR-GROUP/hpx/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 2fc4c10f55e2e6bcdc6f6ff950e26c6d8e218e138fdbd885ee71ccf5c5549054
+  url: https://github.com/STEllAR-GROUP/hpx/archive/refs/tags/v{{ version }}.tar.gz
+  sha256: 328766a059e2ab5b9666793b3d8a1c65b72a8d380a8ac7921271c8646996034b
   patches:
     - patch/hpx-{{ version }}.patch
 
 build:
-  number: 2
+  number: 0
 
 requirements:
   build:
@@ -50,7 +50,7 @@ test:
 
 about:
   home: https://github.com/STEllAR-GROUP/hpx
-  summary: 'The C++ Standard Library for Parallelism and Concurrency'
+  summary: The C++ Standard Library for Parallelism and Concurrency
   description: |
     HPX is a C++ Standard Library for Concurrency and Parallelism. It implements all of the
     corresponding facilities as defined by the C++ Standard. Additionally, in HPX we implement
