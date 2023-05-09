@@ -1,0 +1,13 @@
+diff --git a/libs/core/datastructures/include/hpx/datastructures/detail/optional.hpp b/libs/core/datastructures/include/hpx/datastructures/detail/optional.hpp
+index 98faa50275..ac0cca4650 100644
+--- a/libs/core/datastructures/include/hpx/datastructures/detail/optional.hpp
++++ b/libs/core/datastructures/include/hpx/datastructures/detail/optional.hpp
+@@ -347,7 +347,7 @@ namespace hpx::optional_ns {
+                 std::destroy_at(reinterpret_cast<T*>(&storage_));
+                 empty_ = true;
+             }
+-            std::construct_at(reinterpret_cast<T*>(&storage_),
++            hpx::construct_at(reinterpret_cast<T*>(&storage_),
+                 HPX_FORWARD(F, f)(HPX_FORWARD(Ts, ts)...));
+             empty_ = false;
+         }

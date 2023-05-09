@@ -8,6 +8,8 @@ package:
 source:
   url: https://github.com/STEllAR-GROUP/hpx/archive/refs/tags/v{{ version }}.tar.gz
   sha256: 2a8dca78172fbb15eae5a5e9facf26ab021c845f9c09e61b1912e6cf9e72915a
+  patches:
+    - patch/hpx-{{ version }}.patch
 
 build:
   number: 1
