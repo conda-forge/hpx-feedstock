@@ -11,6 +11,18 @@ index 98faa50275..ac0cca4650 100644
                  HPX_FORWARD(F, f)(HPX_FORWARD(Ts, ts)...));
              empty_ = false;
          }
+diff --git a/libs/core/execution/include/hpx/execution/algorithms/when_all_vector.hpp b/libs/core/execution/include/hpx/execution/algorithms/when_all_vector.hpp
+index 61f2f47dfd..3e1d5ac934 100644
+--- a/libs/core/execution/include/hpx/execution/algorithms/when_all_vector.hpp
++++ b/libs/core/execution/include/hpx/execution/algorithms/when_all_vector.hpp
+@@ -280,7 +280,6 @@ namespace hpx::when_all_vector_detail {
+                     op_states[i].template emplace_f<operation_state_type>(
+                         hpx::execution::experimental::connect, HPX_MOVE(sender),
+                         when_all_vector_receiver{*this, i});
+-                    );
+ #endif
+                     ++i;
+                 }
 diff --git a/libs/core/schedulers/include/hpx/schedulers/background_scheduler.hpp b/libs/core/schedulers/include/hpx/schedulers/background_scheduler.hpp
 index 01f12dc38d..f3c64d8e12 100644
 --- a/libs/core/schedulers/include/hpx/schedulers/background_scheduler.hpp
