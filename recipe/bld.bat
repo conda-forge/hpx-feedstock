@@ -1,8 +1,8 @@
 mkdir build
 cd build
-if %errorlevel% neq 0 exit /b %errorlevel%
+if errorlevel 1 exit 1
 
-cmake %SRC_DIR% ^
+cmake ^
     -G "NMake Makefiles" ^
     -D CMAKE_BUILD_TYPE="Release" ^
     -D CMAKE_INSTALL_PREFIX:PATH="%LIBRARY_PREFIX%" ^
@@ -10,11 +10,12 @@ cmake %SRC_DIR% ^
     -D HPX_WITH_EXAMPLES=FALSE ^
     -D HPX_WITH_MALLOC="mimalloc" ^
     -D HPX_WITH_NETWORKING=FALSE ^
-    -D HPX_WITH_TESTS=FALSE
-if %errorlevel% neq 0 exit /b %errorlevel%
+    -D HPX_WITH_TESTS=FALSE ^
+    ..
+if errorlevel 1 exit 1
 
 cmake --build . --config Release --parallel %CPU_COUNT%
-if %errorlevel% neq 0 exit /b %errorlevel%
+if errorlevel 1 exit 1
 
 cmake --install .
-if %errorlevel% neq 0 exit /b %errorlevel%
+if errorlevel 1 exit 1
