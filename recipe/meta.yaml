@@ -10,7 +10,7 @@ source:
   sha256: 1adae9d408388a723277290ddb33c699aa9ea72defadf3f12d4acc913a0ff22d
 
 build:
-  number: 1
+  number: 2
   run_exports:
     # Impose a runtime requirement to projects that use hpx in their requirements/host
     # section. This will implicitly add hpx to their requirements/run section.
@@ -30,7 +30,7 @@ requirements:
     # Section for the target platform. Might not be the same as the build platform!
     # Dependencies required during build phase needed on the host.
     - asio
-    - boost-cpp
+    - libboost-devel
     - gperftools                                 # [not win]
     - libhwloc
     - mimalloc                                   # [win]
@@ -38,7 +38,6 @@ requirements:
     # Dependencies required for using the software.
     # Stuff required when building software that depends on HPX.
     - asio
-    - boost-cpp
     - gperftools                                 # [not win]
     - mimalloc                                   # [win]
 
