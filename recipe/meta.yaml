@@ -30,7 +30,7 @@ requirements:
     # Section for the target platform. Might not be the same as the build platform!
     # Dependencies required during build phase needed on the host.
     - asio
-    - libboost-devel
+    - libboost-headers
     - gperftools                                 # [not win]
     - libhwloc
     - mimalloc                                   # [win]
@@ -46,6 +46,8 @@ test:
     - {{ compiler('cxx') }}
     - cmake
     - ninja                                      # [not win]
+    # needs boost's CMake metadata
+    - libboost-devel
   files:
     - test/CMakeLists.txt
     - test/hello_hpx.cpp
