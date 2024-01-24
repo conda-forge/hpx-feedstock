@@ -6,6 +6,8 @@ cxx_compiler:
 - vs2019
 libboost_devel:
 - '1.82'
+libhwloc:
+- 2.9.3
 mimalloc:
 - 2.1.2
 target_platform:
