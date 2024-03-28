@@ -3,7 +3,7 @@ set -e
 
 
 mkdir build
-cd build
+pushd build
 
 if [[ "$target_platform" == "osx-64" ]]; then
     # https://conda-forge.org/docs/maintainer/knowledge_base.html#newer-c-features-with-old-sdk
@@ -20,5 +20,5 @@ cmake \
     -D HPX_WITH_NETWORKING=FALSE \
     -D HPX_WITH_TESTS=FALSE \
     ..
-cmake --build . --parallel ${CPU_COUNT}
+cmake --build . --config Release --parallel ${CPU_COUNT}
 cmake --install .

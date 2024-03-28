@@ -1,5 +1,5 @@
 mkdir build
-cd build
+pushd build
 if errorlevel 1 exit /b 1
 
 cmake ^
