@@ -1,12 +1,13 @@
 pushd test
 
-cmake . -D CMAKE_BUILD_TYPE="Release"
-if %errorlevel% neq 0 exit /b %errorlevel%
+cmake . \
+    ${CMAKE_ARGS}
+if errorlevel 1 exit 1
 
 cmake --build . --config Release
-if %errorlevel% neq 0 exit /b %errorlevel%
+if errorlevel 1 exit 1
 
 Release\hello_hpx.exe
-if %errorlevel% neq 0 exit /b %errorlevel%
+if errorlevel 1 exit 1
 
 popd
