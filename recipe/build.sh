@@ -13,7 +13,7 @@ fi
 cmake \
     -G"Ninja" \
     ${CMAKE_ARGS} \
-    -D CMAKE_BUILD_TYPE="Release" \
+    -D CMAKE_INSTALL_LIBDIR=lib \
     -D HPX_WITH_EXAMPLES=FALSE \
     -D HPX_WITH_MALLOC="tcmalloc" \
     -D HPX_WITH_NETWORKING=FALSE \
