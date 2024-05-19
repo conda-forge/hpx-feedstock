@@ -11,6 +11,6 @@ libboost_devel:
 libhwloc:
 - 2.10.0
 mimalloc:
-- 2.1.2
+- 2.1.6
 target_platform:
 - win-64
