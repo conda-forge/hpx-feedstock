@@ -8,7 +8,7 @@ package:
 source:
   # TODO get rid of -rc2
   url: https://github.com/STEllAR-GROUP/hpx/archive/refs/tags/v{{ version }}-rc2.tar.gz
-  sha256: 4d51e9de61186688695dac4862c4ac3087923525
+  sha256: b5c2afb2949e2c107a871a95cebac3d0526c2e40e4815af40fc2907825c8f6f1
 
 build:
   number: 1
