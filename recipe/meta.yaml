@@ -10,7 +10,7 @@ source:
   # url: https://github.com/STEllAR-GROUP/hpx/archive/refs/tags/v{{ version }}.tar.gz
   # sha256: b5c2afb2949e2c107a871a95cebac3d0526c2e40e4815af40fc2907825c8f6f1
   git_url: https://github.com/STEllAR-GROUP/hpx.git
-  git_tag: release-1.10.X
+  git_rev: release-1.10.X
 
 build:
   number: 1
