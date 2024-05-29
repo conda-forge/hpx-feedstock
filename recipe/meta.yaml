@@ -6,8 +6,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/STEllAR-GROUP/hpx/archive/refs/tags/v{{ version }}-rc3.tar.gz
-  sha256: f99809b8abfd526918559f38d13331d0c80ed8b4a1d2f25fca2f85d639488581
+  url: https://github.com/STEllAR-GROUP/hpx/archive/refs/tags/v{{ version }}.tar.gz
+  sha256: 5720ed7d2460fa0b57bd8cb74fa4f70593fe8675463897678160340526ec3c19
 
 build:
   number: 1
