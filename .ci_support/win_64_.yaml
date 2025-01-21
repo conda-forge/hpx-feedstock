@@ -13,6 +13,6 @@ libboost_headers:
 libhwloc:
 - 2.11.2
 mimalloc:
-- 2.1.7
+- 3.0.1
 target_platform:
 - win-64
