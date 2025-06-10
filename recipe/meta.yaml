@@ -10,7 +10,7 @@ source:
   sha256: 931380cf35df66281a09be26c774374eda184c4a178b4d8cebd9ae310903ec58
 
 build:
-  number: 1
+  number: 0
   run_exports:
     # Impose a runtime requirement to projects that use hpx in their requirements/host
     # section. This will implicitly add hpx to their requirements/run section.
