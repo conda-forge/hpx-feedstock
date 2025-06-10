@@ -1,4 +1,4 @@
-{% set version = "1.10.0" %}
+{% set version = "1.11.0" %}
 
 
 package:
@@ -6,11 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/STEllAR-GROUP/hpx/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 5720ed7d2460fa0b57bd8cb74fa4f70593fe8675463897678160340526ec3c19
+  url: https://github.com/STEllAR-GROUP/hpx/archive/refs/tags/v{{ version }}-rc1.tar.gz
+  sha256: 931380cf35df66281a09be26c774374eda184c4a178b4d8cebd9ae310903ec58
 
 build:
-  number: 7
+  number: 1
   run_exports:
     # Impose a runtime requirement to projects that use hpx in their requirements/host
     # section. This will implicitly add hpx to their requirements/run section.
