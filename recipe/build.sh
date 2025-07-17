@@ -10,13 +10,19 @@ if [[ "$target_platform" == "osx-64" ]]; then
     export CXXFLAGS="${CXXFLAGS} -D_LIBCPP_DISABLE_AVAILABILITY"
 fi
 
+# Ensure malloc is set, defaulting to tcmalloc if not specified
+if [[-z "$malloc" ]]; then
+    # Default to tcmalloc if malloc is not set
+    export malloc="tcmalloc"
+fi
+
 cmake \
     -G"Ninja" \
     ${CMAKE_ARGS} \
     -D CMAKE_INSTALL_LIBDIR=lib \
     -D PYTHON_EXECUTABLE="$PYTHON" \
     -D HPX_WITH_EXAMPLES=FALSE \
-    -D HPX_WITH_MALLOC="tcmalloc" \
+    -D HPX_WITH_MALLOC="$malloc" \
     -D HPX_WITH_NETWORKING=FALSE \
     -D HPX_WITH_TESTS=FALSE \
     ..
