@@ -1,8 +1,17 @@
+{% set name = "hpx" %}
 {% set version = "1.10.0" %}
+{% set build = 6 %}
 
+# ensure malloc is defined (needed for conda-smithy recipe-lint)
+{% set malloc = malloc or 'tcmalloc' %}  # [linux]
+
+# prioritize tcmalloc variant via build number
+{% if malloc == 'tcmalloc' %}  # [linux]
+  {% set build = build + 100 %}  # [linux]
+{% endif %}  # [linux]
 
 package:
-  name: hpx
+  name: {{ name }}
   version: {{ version }}
 
 source:
@@ -10,7 +19,9 @@ source:
   sha256: 5720ed7d2460fa0b57bd8cb74fa4f70593fe8675463897678160340526ec3c19
 
 build:
-  number: 5
+  number: {{ build }}
+  {% set malloc_prefix = malloc + "_malloc" %}  # [linux]
+  string: "{{ malloc_prefix }}_h{{ PKG_HASH }}_{{ build }}"  # [linux]
   run_exports:
     # Impose a runtime requirement to projects that use hpx in their requirements/host
     # section. This will implicitly add hpx to their requirements/run section.
