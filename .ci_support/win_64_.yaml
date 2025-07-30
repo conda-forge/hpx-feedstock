@@ -5,13 +5,13 @@ channel_sources:
 channel_targets:
 - conda-forge main
 cxx_compiler:
-- vs2019
+- vs2022
 libboost_devel:
 - '1.86'
 libboost_headers:
 - '1.86'
 libhwloc:
-- 2.11.2
+- 2.12.1
 mimalloc:
 - 3.0.1
 target_platform:
