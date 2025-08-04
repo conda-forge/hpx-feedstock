@@ -6,8 +6,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/STEllAR-GROUP/hpx/archive/refs/tags/v{{ version }}-rc1.tar.gz
-  sha256: 931380cf35df66281a09be26c774374eda184c4a178b4d8cebd9ae310903ec58
+  url: https://github.com/STEllAR-GROUP/hpx/archive/refs/tags/v{{ version }}.tar.gz
+  sha256: 01ec47228a2253b41e318bb09c83325a75021eb6ef3262400fbda30ac7389279
 
 build:
   number: 0
@@ -50,7 +50,7 @@ test:
     - cmake
     - ninja                                      # [not win]
     # needs boost's CMake metadata
-    - libboost-devel
+    - libboost-devel                             # [osx]
   files:
     - test/CMakeLists.txt
     - test/hello_hpx.cpp
