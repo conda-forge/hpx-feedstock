@@ -44,6 +44,7 @@ requirements:
     - asio
     - gperftools                                 # [not win]
     - mimalloc                                   # [win]
+    - python
 
 test:
   requires:
