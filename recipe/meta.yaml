@@ -10,7 +10,7 @@ source:
   sha256: 01ec47228a2253b41e318bb09c83325a75021eb6ef3262400fbda30ac7389279
 
 build:
-  number: 0
+  number: 1
   run_exports:
     # Impose a runtime requirement to projects that use hpx in their requirements/host
     # section. This will implicitly add hpx to their requirements/run section.
@@ -37,6 +37,7 @@ requirements:
     - gperftools                                 # [not win]
     - libhwloc
     - mimalloc                                   # [win]
+    - python
   run:
     # Dependencies required for using the software.
     # Stuff required when building software that depends on HPX.
@@ -54,6 +55,8 @@ test:
   files:
     - test/CMakeLists.txt
     - test/hello_hpx.cpp
+  commands:
+    - hpxrun.py --help
 
 about:
   home: https://github.com/STEllAR-GROUP/hpx
