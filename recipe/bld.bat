@@ -4,7 +4,7 @@ if errorlevel 1 exit /b 1
 
 cmake ^
     %CMAKE_ARGS% ^
-    -D PYTHON_EXECUTABLE="%PYTHON%" ^
+    -D Python_EXECUTABLE="%PYTHON%" ^
     -D CMAKE_INSTALL_LIBDIR=lib ^
     -D HPX_WITH_EXAMPLES=FALSE ^
     -D HPX_WITH_MALLOC="mimalloc" ^
