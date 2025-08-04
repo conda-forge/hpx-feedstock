@@ -50,7 +50,7 @@ test:
     - cmake
     - ninja                                      # [not win]
     # needs boost's CMake metadata
-    - libboost-devel                             # [osx]
+    - libboost-devel
   files:
     - test/CMakeLists.txt
     - test/hello_hpx.cpp
