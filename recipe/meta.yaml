@@ -24,8 +24,7 @@ requirements:
     - ninja                                      # [not win]
   host:
     - asio
-    - libboost-headers                           # [not osx]
-    - libboost-devel                             # [osx]
+    - libboost-headers
     - gperftools                                 # [not win]
     - libhwloc
     - mimalloc                                   # [win]
