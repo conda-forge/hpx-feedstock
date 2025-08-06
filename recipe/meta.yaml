@@ -10,40 +10,34 @@ source:
   sha256: 01ec47228a2253b41e318bb09c83325a75021eb6ef3262400fbda30ac7389279
 
 build:
-  number: 2
+  number: 3
   run_exports:
-    # Impose a runtime requirement to projects that use hpx in their requirements/host
-    # section. This will implicitly add hpx to their requirements/run section.
-    # If hpx were version 1.9.0, this pinning expression evaluates to >=1.9.0,<1.10
-    - {{ pin_subpackage('hpx', max_pin='x.x') }}
+    weak:
+      - {{ pin_subpackage("hpx", max_pin="x.x") }}
 
 requirements:
   build:
-    # Section for the native build platform. Think "build-tools", that run on the native platform,
-    # but output results for the target platform.
-    # Dependencies required during the build phase not needed on the host.
     - {{ compiler('cxx') }}
     - {{ stdlib("c") }}
     - cmake
     - git                                        # [win]
     - ninja                                      # [not win]
   host:
-    # Section for the target platform. Might not be the same as the build platform!
-    # Dependencies required during build phase needed on the host.
     - asio
     - libboost-headers                           # [not osx]
-    # osx actually needs boost's CMake metadata _and_ libs
     - libboost-devel                             # [osx]
     - gperftools                                 # [not win]
     - libhwloc
     - mimalloc                                   # [win]
     - python
   run:
-    # Dependencies required for using the software.
-    # Stuff required when building software that depends on HPX.
+    # Packages needed for downstream packages that use HPX at:
+    # - build-time: headers, libraries
+    # - runtime: shared libraries, interpreter (for hpxrun.py)
+    # Only list packages whose meta.yaml doesn't contain a run_exports already
     - asio
+    - libboost-headers
     - gperftools                                 # [not win]
-    - mimalloc                                   # [win]
     - python
 
 test:
@@ -51,12 +45,11 @@ test:
     - {{ compiler('cxx') }}
     - cmake
     - ninja                                      # [not win]
-    # needs boost's CMake metadata
-    - libboost-devel
   files:
     - test/CMakeLists.txt
     - test/hello_hpx.cpp
   commands:
+    # TODO: This seems to silently fail on Windows (but hpxrun.py is installed)
     - hpxrun.py --help
 
 about:

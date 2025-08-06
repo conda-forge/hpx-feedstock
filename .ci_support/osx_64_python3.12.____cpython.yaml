@@ -14,7 +14,7 @@ cxx_compiler:
 - clangxx
 cxx_compiler_version:
 - '19'
-libboost_devel:
+libboost_headers:
 - '1.88'
 libhwloc:
 - 2.12.1
