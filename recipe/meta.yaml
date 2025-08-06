@@ -10,7 +10,7 @@ source:
   sha256: 01ec47228a2253b41e318bb09c83325a75021eb6ef3262400fbda30ac7389279
 
 build:
-  number: 3
+  number: 4
   run_exports:
     weak:
       - {{ pin_subpackage("hpx", max_pin="x.x") }}
@@ -24,8 +24,7 @@ requirements:
     - ninja                                      # [not win]
   host:
     - asio
-    - libboost-headers                           # [not osx]
-    - libboost-devel                             # [osx]
+    - libboost-devel
     - gperftools                                 # [not win]
     - libhwloc
     - mimalloc                                   # [win]
