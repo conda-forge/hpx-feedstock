@@ -11,6 +11,9 @@ source:
 
 build:
   number: 3
+  run_exports:
+    weak:
+      - {{ pin_subpackage("hpx", max_pin="x.x") }}
 
 requirements:
   build:
@@ -36,9 +39,6 @@ requirements:
     - libboost-headers
     - gperftools                                 # [not win]
     - python
-  run_exports:
-    weak:
-      - {{ pin_subpackage("hpx", max_pin="x.x") }}
 
 test:
   requires:
