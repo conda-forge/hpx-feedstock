@@ -12,5 +12,5 @@ cmake -G "Ninja" ${CMAKE_ARGS} .
 cmake --build . --config Release
 ./hello_hpx
 
-cmake --install . --prefix test
-test/bin/hello_hpx
+cmake --install . --prefix hello
+hello/bin/hello_hpx
