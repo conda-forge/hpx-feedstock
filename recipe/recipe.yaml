@@ -1,0 +1,98 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/prefix-dev/recipe-format/main/schema.json
+schema_version: 1
+
+context:
+  name: hpx
+  version: 1.11.0
+  build: 3
+  system_malloc: system
+
+recipe:
+  name: ${{ name }}
+  version: ${{ version }}
+
+source:
+  url: https://github.com/STEllAR-GROUP/hpx/archive/refs/tags/v${{ version }}.tar.gz
+  sha256: 01ec47228a2253b41e318bb09c83325a75021eb6ef3262400fbda30ac7389279
+
+build:
+  number: ${{ build }}
+
+
+outputs:
+  - package:
+      name: "${{ name }}"
+      version: ${{ version }}
+
+    requirements:
+      build:
+        # Section for the native build platform. Think "build-tools", that run on the native platform,
+        # but output results for the target platform.
+        # Dependencies required during the build phase not needed on the host.
+        - ${{ compiler('cxx') }}
+        - ${{ stdlib("c") }}
+        - cmake
+        - if: win
+          then: git
+        - if: not win
+          then: ninja
+      host:
+        # Section for the target platform. Might not be the same as the build platform!
+        # Dependencies required during build phase needed on the host.
+        - asio
+        - if: not osx
+          then: libboost-headers
+        # osx actually needs boost's CMake metadata _and_ libs
+        - if: osx
+          then: libboost-devel
+        - if: not win
+          then: gperftools
+        - libhwloc
+        - if: win
+          then: mimalloc
+        - python
+      run:
+        # Dependencies required for using the software.
+        # Stuff required when building software that depends on HPX.
+        - asio
+        - if: not win
+          then: gperftools
+        - if: win
+          then: mimalloc
+        - python
+      run_exports:
+        - ${{ pin_subpackage('hpx', upper_bound='x.x') }}
+
+    tests:
+      - files:
+          recipe:
+            - test/CMakeLists.txt
+            - test/hello_hpx.cpp
+        requirements:
+          run:
+            - ${{ compiler('cxx') }}
+            - cmake
+            - if: not win
+              then: ninja
+            - libboost-devel
+        script:
+          - hpxrun.py --help
+
+about:
+  summary: The C++ Standard Library for Parallelism and Concurrency
+  description: |
+    HPX is a C++ Standard Library for Concurrency and Parallelism. It implements all of the
+    corresponding facilities as defined by the C++ Standard. Additionally, in HPX we implement
+    functionalities proposed as part of the ongoing C++ standardization process. We also extend
+    the C++ Standard APIs to the distributed case.
+  license: BSL-1.0
+  license_file: LICENSE_1_0.txt
+  homepage: https://github.com/STEllAR-GROUP/hpx
+  repository: https://github.com/STEllAR-GROUP/hpx
+  documentation: https://hpx.stellar-group.org/documentation
+
+extra:
+  recipe-maintainers:
+    - kordejong
+    - oliverschmitz
+    - hkaiser
