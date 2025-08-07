@@ -1,64 +1,67 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/prefix-dev/recipe-format/main/schema.json
 schema_version: 1
 
 context:
-  version: 1.11.0
-
-package:
   name: hpx
-  version: ${{ version }}
+  version: 1.11.0
+  build_number: 7
 
 source:
   url: https://github.com/STEllAR-GROUP/hpx/archive/refs/tags/v${{ version }}.tar.gz
   sha256: 01ec47228a2253b41e318bb09c83325a75021eb6ef3262400fbda30ac7389279
 
 build:
-  number: 6
+  number: ${{ build_number }}
 
-requirements:
-  build:
-    - ${{ compiler('cxx') }}
-    - ${{ stdlib("c") }}
-    - cmake
-    - if: win
-      then: git
-    - if: not win
-      then: ninja
-  host:
-    - asio
-    - libboost-devel
-    - if: not win
-      then: gperftools
-    - libhwloc
-    - if: win
-      then: mimalloc
-    - python
-  run:
-    # Packages needed for downstream packages that use HPX at:
-    # - build-time: headers, libraries
-    # - runtime: shared libraries, interpreter (for hpxrun.py)
-    # Only list packages whose meta.yaml doesn't contain a run_exports already
-    - asio
-    - libboost-devel
-    - if: not win
-      then: gperftools
-    - python
-  run_exports:
-    weak:
-      - ${{ pin_subpackage("hpx", upper_bound="x.x") }}
-
-tests:
-  - files:
-      recipe:
-        - test/CMakeLists.txt
-        - test/hello_hpx.cpp
+outputs:
+  - package:
+      name: ${{ name }}
+      version: ${{ version }}
     requirements:
-      run:
+      build:
         - ${{ compiler('cxx') }}
+        - ${{ stdlib("c") }}
         - cmake
+        - if: win
+          then: git
         - if: not win
           then: ninja
-    script:
-      - hpxrun.py --help
+      host:
+        - asio
+        - libboost-devel
+        - if: not win
+          then: gperftools
+        - libhwloc
+        - if: win
+          then: mimalloc
+        - python
+      run:
+        # Packages needed for downstream packages that use HPX at:
+        # - build-time: headers, libraries
+        # - runtime: shared libraries, interpreter (for hpxrun.py)
+        # Only list packages whose meta.yaml doesn't contain a run_exports already
+        - asio
+        - libboost-devel
+        - if: not win
+          then: gperftools
+        - python
+      run_exports:
+        weak:
+          - ${{ pin_subpackage("hpx", upper_bound="x.x") }}
+
+    tests:
+      - files:
+          recipe:
+            - test/CMakeLists.txt
+            - test/hello_hpx.cpp
+        requirements:
+          run:
+            - ${{ compiler('cxx') }}
+            - cmake
+            - if: not win
+              then: ninja
+        script:
+          - hpxrun.py --help
 
 about:
   summary: The C++ Standard Library for Parallelism and Concurrency
