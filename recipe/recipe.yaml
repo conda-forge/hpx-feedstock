@@ -1,33 +1,36 @@
-{% set version = "1.11.0" %}
+schema_version: 1
 
+context:
+  version: 1.11.0
 
 package:
   name: hpx
-  version: {{ version }}
+  version: ${{ version }}
 
 source:
-  url: https://github.com/STEllAR-GROUP/hpx/archive/refs/tags/v{{ version }}.tar.gz
+  url: https://github.com/STEllAR-GROUP/hpx/archive/refs/tags/v${{ version }}.tar.gz
   sha256: 01ec47228a2253b41e318bb09c83325a75021eb6ef3262400fbda30ac7389279
 
 build:
-  number: 4
-  run_exports:
-    weak:
-      - {{ pin_subpackage("hpx", max_pin="x.x") }}
+  number: 5
 
 requirements:
   build:
-    - {{ compiler('cxx') }}
-    - {{ stdlib("c") }}
+    - ${{ compiler('cxx') }}
+    - ${{ stdlib("c") }}
     - cmake
-    - git                                        # [win]
-    - ninja                                      # [not win]
+    - if: win
+      then: git
+    - if: not win
+      then: ninja
   host:
     - asio
     - libboost-devel
-    - gperftools                                 # [not win]
+    - if: not win
+      then: gperftools
     - libhwloc
-    - mimalloc                                   # [win]
+    - if: win
+      then: mimalloc
     - python
   run:
     # Packages needed for downstream packages that use HPX at:
@@ -36,23 +39,28 @@ requirements:
     # Only list packages whose meta.yaml doesn't contain a run_exports already
     - asio
     - libboost-headers
-    - gperftools                                 # [not win]
+    - if: not win
+      then: gperftools
     - python
+  run_exports:
+    weak:
+      - ${{ pin_subpackage("hpx", upper_bound="x.x") }}
 
-test:
-  requires:
-    - {{ compiler('cxx') }}
-    - cmake
-    - ninja                                      # [not win]
-  files:
-    - test/CMakeLists.txt
-    - test/hello_hpx.cpp
-  commands:
-    # TODO: This seems to silently fail on Windows (but hpxrun.py is installed)
-    - hpxrun.py --help
+tests:
+  - files:
+      recipe:
+        - test/CMakeLists.txt
+        - test/hello_hpx.cpp
+    requirements:
+      run:
+        - ${{ compiler('cxx') }}
+        - cmake
+        - if: not win
+          then: ninja
+    script:
+      - hpxrun.py --help
 
 about:
-  home: https://github.com/STEllAR-GROUP/hpx
   summary: The C++ Standard Library for Parallelism and Concurrency
   description: |
     HPX is a C++ Standard Library for Concurrency and Parallelism. It implements all of the
@@ -61,8 +69,9 @@ about:
     the C++ Standard APIs to the distributed case.
   license: BSL-1.0
   license_file: LICENSE_1_0.txt
-  doc_url: https://hpx.stellar-group.org/documentation
-  dev_url: https://github.com/STEllAR-GROUP/hpx
+  homepage: https://github.com/STEllAR-GROUP/hpx
+  repository: https://github.com/STEllAR-GROUP/hpx
+  documentation: https://hpx.stellar-group.org/documentation
 
 extra:
   recipe-maintainers:
