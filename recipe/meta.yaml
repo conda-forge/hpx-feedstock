@@ -61,7 +61,10 @@ outputs:
           then: mimalloc
         - python
       run_exports:
-        - ${{ pin_subpackage('hpx', upper_bound='x.x') }}
+        # Impose a runtime requirement to projects that use hpx in their requirements/host
+        # section. This will implicitly add hpx to their requirements/run section.
+        # If hpx were version 1.9.0, this pinning expression evaluates to >=1.9.0,<1.10
+        - ${{ pin_subpackage('hpx', max_pin='x.x') }}
 
     tests:
       - files:
