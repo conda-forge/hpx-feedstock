@@ -67,6 +67,60 @@ outputs:
         script:
           - hpxrun.py --help
 
+  - package:
+      name: ${{ name }}-system
+      version: ${{ version }}
+    build:
+      script:
+        file: ${{ "build.sh" if unix else "build.bat" }}
+        env: 
+          malloc: system
+    requirements:
+      build:
+        - ${{ compiler('cxx') }}
+        - ${{ stdlib("c") }}
+        - cmake
+        - if: win
+          then: git
+        - if: not win
+          then: ninja
+      host:
+        - asio
+        - libboost-devel
+        - if: not win
+          then: gperftools
+        - libhwloc
+        - if: win
+          then: mimalloc
+        - python
+      run:
+        # Packages needed for downstream packages that use HPX at:
+        # - build-time: headers, libraries
+        # - runtime: shared libraries, interpreter (for hpxrun.py)
+        # Only list packages whose meta.yaml doesn't contain a run_exports already
+        - asio
+        - libboost-devel
+        - if: not win
+          then: gperftools
+        - python
+      run_exports:
+        weak:
+          - ${{ pin_subpackage("hpx-system", upper_bound="x.x") }}
+
+    tests:
+      - files:
+          recipe:
+            - test/CMakeLists.txt
+            - test/hello_hpx.cpp
+        requirements:
+          run:
+            - ${{ compiler('cxx') }}
+            - cmake
+            - if: not win
+              then: ninja
+        script:
+          - hpxrun.py --help
+
 about:
   summary: The C++ Standard Library for Parallelism and Concurrency
   description: |
