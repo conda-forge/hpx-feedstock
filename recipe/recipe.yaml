@@ -38,7 +38,7 @@ requirements:
     # - runtime: shared libraries, interpreter (for hpxrun.py)
     # Only list packages whose meta.yaml doesn't contain a run_exports already
     - asio
-    - libboost-headers
+    - libboost-devel
     - if: not win
       then: gperftools
     - python
