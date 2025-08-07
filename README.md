@@ -18,7 +18,6 @@ corresponding facilities as defined by the C++ Standard. Additionally, in HPX we
 functionalities proposed as part of the ongoing C++ standardization process. We also extend
 the C++ Standard APIs to the distributed case.
 
-
 Current build status
 ====================
 

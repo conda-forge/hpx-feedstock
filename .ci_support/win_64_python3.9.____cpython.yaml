@@ -8,8 +8,6 @@ cxx_compiler:
 - vs2022
 libboost_devel:
 - '1.88'
-libboost_headers:
-- '1.88'
 libhwloc:
 - 2.12.1
 mimalloc:

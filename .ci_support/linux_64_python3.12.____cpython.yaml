@@ -16,8 +16,6 @@ docker_image:
 - quay.io/condaforge/linux-anvil-x86_64:alma9
 libboost_devel:
 - '1.88'
-libboost_headers:
-- '1.88'
 libhwloc:
 - 2.12.1
 pin_run_as_build:

@@ -16,8 +16,6 @@ cxx_compiler_version:
 - '19'
 libboost_devel:
 - '1.88'
-libboost_headers:
-- '1.88'
 libhwloc:
 - 2.12.1
 macos_machine:
