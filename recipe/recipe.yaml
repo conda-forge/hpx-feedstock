@@ -2,9 +2,13 @@
 schema_version: 1
 
 context:
-  name: hpx
+  name: "hpx"
   version: 1.11.0
   build_number: 7
+
+recipe:
+  name: ${{ name }}
+  version: ${{ version }}
 
 source:
   url: https://github.com/STEllAR-GROUP/hpx/archive/refs/tags/v${{ version }}.tar.gz
