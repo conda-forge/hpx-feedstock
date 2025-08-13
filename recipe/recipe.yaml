@@ -4,7 +4,7 @@ schema_version: 1
 context:
   name: hpx
   version: 1.11.0
-  build_number: 7
+  build_number: 8
 
 recipe:
   name: ${{ name }}
