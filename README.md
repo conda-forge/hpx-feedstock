@@ -189,6 +189,7 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-hpx-green.svg)](https://anaconda.org/conda-forge/hpx) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/hpx.svg)](https://anaconda.org/conda-forge/hpx) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/hpx.svg)](https://anaconda.org/conda-forge/hpx) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/hpx.svg)](https://anaconda.org/conda-forge/hpx) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-hpx--system-green.svg)](https://anaconda.org/conda-forge/hpx-system) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/hpx-system.svg)](https://anaconda.org/conda-forge/hpx-system) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/hpx-system.svg)](https://anaconda.org/conda-forge/hpx-system) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/hpx-system.svg)](https://anaconda.org/conda-forge/hpx-system) |
 
 Installing hpx
 ==============
@@ -200,16 +201,16 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `hpx` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `hpx, hpx-system` can be installed with `conda`:
 
 ```
-conda install hpx
+conda install hpx hpx-system
 ```
 
 or with `mamba`:
 
 ```
-mamba install hpx
+mamba install hpx hpx-system
 ```
 
 It is possible to list all of the versions of `hpx` available on your platform with `conda`:
