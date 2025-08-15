@@ -18,6 +18,8 @@ libboost_devel:
 - '1.88'
 libhwloc:
 - 2.12.1
+malloc:
+- tcmalloc
 pin_run_as_build:
   python:
     min_pin: x.x
