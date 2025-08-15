@@ -10,6 +10,8 @@ libboost_devel:
 - '1.88'
 libhwloc:
 - 2.12.1
+malloc:
+- mimalloc
 mimalloc:
 - 3.1.5
 pin_run_as_build:
@@ -17,6 +19,6 @@ pin_run_as_build:
     min_pin: x.x
     max_pin: x.x
 python:
-- 3.11.* *_cpython
+- 3.13.* *_cp313
 target_platform:
 - win-64
