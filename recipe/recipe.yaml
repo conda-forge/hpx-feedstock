@@ -29,6 +29,11 @@ outputs:
   - package:
       name: ${{ name }}
       version: ${{ version }}
+    build:
+      script:
+        file: ${{ "build.sh" if unix else "build.bat" }}
+        env: 
+          malloc: ${{ malloc }}
     requirements:
       build:
         - ${{ compiler('cxx') }}
