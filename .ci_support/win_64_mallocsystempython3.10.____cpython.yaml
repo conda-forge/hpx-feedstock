@@ -10,6 +10,8 @@ libboost_devel:
 - '1.88'
 libhwloc:
 - 2.12.1
+malloc:
+- system
 mimalloc:
 - 3.1.5
 pin_run_as_build:

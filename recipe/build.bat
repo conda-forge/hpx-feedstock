@@ -2,12 +2,14 @@ mkdir build
 pushd build
 if errorlevel 1 exit /b 1
 
+if not defined malloc set malloc=mimalloc
+
 cmake ^
     %CMAKE_ARGS% ^
     -D Python_EXECUTABLE="%PYTHON%" ^
     -D CMAKE_INSTALL_LIBDIR=lib ^
     -D HPX_WITH_EXAMPLES=FALSE ^
-    -D HPX_WITH_MALLOC="mimalloc" ^
+    -D HPX_WITH_MALLOC="%malloc%" ^
     -D HPX_WITH_NETWORKING=FALSE ^
     -D HPX_WITH_TESTS=FALSE ^
     ..
