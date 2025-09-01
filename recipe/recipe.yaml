@@ -4,7 +4,7 @@ schema_version: 1
 context:
   name: hpx
   version: 1.11.0
-  build_number: 8
+  build_number: 9
 
 recipe:
   name: ${{ name }}
@@ -32,7 +32,7 @@ outputs:
     build:
       script:
         file: ${{ "build.sh" if unix else "build.bat" }}
-        env: 
+        env:
           malloc: ${{ malloc }}
     requirements:
       build:
@@ -41,8 +41,7 @@ outputs:
         - cmake
         - if: win
           then: git
-        - if: not win
-          then: ninja
+          else: ninja
       host:
         - asio
         - libboost-devel
