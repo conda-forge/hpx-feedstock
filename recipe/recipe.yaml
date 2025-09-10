@@ -54,7 +54,7 @@ outputs:
       run:
         # Packages needed for downstream packages that use HPX at:
         # - build-time: headers, libraries
-        # - runtime: shared libraries, interpreter (for hpxrun.py)
+        # - runtime: shared libraries
         # Only list packages whose meta.yaml doesn't contain a run_exports already
         - asio
         - if: not win
@@ -74,6 +74,7 @@ outputs:
         requirements:
           run:
             - ${{ compiler('cxx') }}
+            - ${{ stdlib("c") }}
             - cmake
             - libboost-devel
             - if: not win
