@@ -39,7 +39,7 @@ outputs:
         - ${{ compiler('cxx') }}
         - ${{ stdlib("c") }}
         - cmake
-        - python
+        - python *
         - if: win
           then: git
           else: ninja
