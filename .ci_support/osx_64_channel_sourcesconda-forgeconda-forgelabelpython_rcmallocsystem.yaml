@@ -21,15 +21,6 @@ libhwloc:
 macos_machine:
 - x86_64-apple-darwin13.4.0
 malloc:
-- tcmalloc
-pin_run_as_build:
-  python:
-    min_pin: x.x
-    max_pin: x.x
-python:
-- 3.14.* *_cp314
+- system
 target_platform:
 - osx-64
-zip_keys:
-- - python
-  - channel_sources

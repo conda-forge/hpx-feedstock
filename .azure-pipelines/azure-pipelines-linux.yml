@@ -8,44 +8,20 @@ jobs:
     vmImage: ubuntu-latest
   strategy:
     matrix:
-      linux_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmallocsystempython3.14.____cp314:
-        CONFIG: linux_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmallocsystempython3.14.____cp314
+      linux_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmallocsystem:
+        CONFIG: linux_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmallocsystem
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-      linux_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmalloctcmallocpython3.14.____cp314:
-        CONFIG: linux_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmalloctcmallocpython3.14.____cp314
+      linux_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmalloctcmalloc:
+        CONFIG: linux_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmalloctcmalloc
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-      linux_64_channel_sourcesconda-forgemallocsystempython3.10.____cpython:
-        CONFIG: linux_64_channel_sourcesconda-forgemallocsystempython3.10.____cpython
+      linux_64_channel_sourcesconda-forgemallocsystem:
+        CONFIG: linux_64_channel_sourcesconda-forgemallocsystem
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-      linux_64_channel_sourcesconda-forgemallocsystempython3.11.____cpython:
-        CONFIG: linux_64_channel_sourcesconda-forgemallocsystempython3.11.____cpython
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-      linux_64_channel_sourcesconda-forgemallocsystempython3.12.____cpython:
-        CONFIG: linux_64_channel_sourcesconda-forgemallocsystempython3.12.____cpython
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-      linux_64_channel_sourcesconda-forgemallocsystempython3.13.____cp313:
-        CONFIG: linux_64_channel_sourcesconda-forgemallocsystempython3.13.____cp313
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-      linux_64_channel_sourcesconda-forgemalloctcmallocpython3.10.____cpython:
-        CONFIG: linux_64_channel_sourcesconda-forgemalloctcmallocpython3.10.____cpython
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-      linux_64_channel_sourcesconda-forgemalloctcmallocpython3.11.____cpython:
-        CONFIG: linux_64_channel_sourcesconda-forgemalloctcmallocpython3.11.____cpython
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-      linux_64_channel_sourcesconda-forgemalloctcmallocpython3.12.____cpython:
-        CONFIG: linux_64_channel_sourcesconda-forgemalloctcmallocpython3.12.____cpython
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-      linux_64_channel_sourcesconda-forgemalloctcmallocpython3.13.____cp313:
-        CONFIG: linux_64_channel_sourcesconda-forgemalloctcmallocpython3.13.____cp313
+      linux_64_channel_sourcesconda-forgemalloctcmalloc:
+        CONFIG: linux_64_channel_sourcesconda-forgemalloctcmalloc
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
   timeoutInMinutes: 360
