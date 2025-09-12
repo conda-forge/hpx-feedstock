@@ -8,35 +8,17 @@ jobs:
     vmImage: windows-2022
   strategy:
     matrix:
-      win_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmallocmimallocpython3.14.____cp314:
-        CONFIG: win_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmallocmimallocpython3.14.____cp314
+      win_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmallocmimalloc:
+        CONFIG: win_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmallocmimalloc
         UPLOAD_PACKAGES: 'True'
-      win_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmallocsystempython3.14.____cp314:
-        CONFIG: win_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmallocsystempython3.14.____cp314
+      win_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmallocsystem:
+        CONFIG: win_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmallocsystem
         UPLOAD_PACKAGES: 'True'
-      win_64_channel_sourcesconda-forgemallocmimallocpython3.10.____cpython:
-        CONFIG: win_64_channel_sourcesconda-forgemallocmimallocpython3.10.____cpython
+      win_64_channel_sourcesconda-forgemallocmimalloc:
+        CONFIG: win_64_channel_sourcesconda-forgemallocmimalloc
         UPLOAD_PACKAGES: 'True'
-      win_64_channel_sourcesconda-forgemallocmimallocpython3.11.____cpython:
-        CONFIG: win_64_channel_sourcesconda-forgemallocmimallocpython3.11.____cpython
-        UPLOAD_PACKAGES: 'True'
-      win_64_channel_sourcesconda-forgemallocmimallocpython3.12.____cpython:
-        CONFIG: win_64_channel_sourcesconda-forgemallocmimallocpython3.12.____cpython
-        UPLOAD_PACKAGES: 'True'
-      win_64_channel_sourcesconda-forgemallocmimallocpython3.13.____cp313:
-        CONFIG: win_64_channel_sourcesconda-forgemallocmimallocpython3.13.____cp313
-        UPLOAD_PACKAGES: 'True'
-      win_64_channel_sourcesconda-forgemallocsystempython3.10.____cpython:
-        CONFIG: win_64_channel_sourcesconda-forgemallocsystempython3.10.____cpython
-        UPLOAD_PACKAGES: 'True'
-      win_64_channel_sourcesconda-forgemallocsystempython3.11.____cpython:
-        CONFIG: win_64_channel_sourcesconda-forgemallocsystempython3.11.____cpython
-        UPLOAD_PACKAGES: 'True'
-      win_64_channel_sourcesconda-forgemallocsystempython3.12.____cpython:
-        CONFIG: win_64_channel_sourcesconda-forgemallocsystempython3.12.____cpython
-        UPLOAD_PACKAGES: 'True'
-      win_64_channel_sourcesconda-forgemallocsystempython3.13.____cp313:
-        CONFIG: win_64_channel_sourcesconda-forgemallocsystempython3.13.____cp313
+      win_64_channel_sourcesconda-forgemallocsystem:
+        CONFIG: win_64_channel_sourcesconda-forgemallocsystem
         UPLOAD_PACKAGES: 'True'
   timeoutInMinutes: 360
   variables:
