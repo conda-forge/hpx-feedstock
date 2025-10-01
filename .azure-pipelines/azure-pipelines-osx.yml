@@ -5,68 +5,32 @@
 jobs:
 - job: osx
   pool:
-    vmImage: macOS-13
+    vmImage: macOS-15
   strategy:
     matrix:
-      osx_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmallocsystempython3.14.____cp314:
-        CONFIG: osx_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmallocsystempython3.14.____cp314
+      osx_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmallocsystem:
+        CONFIG: osx_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmallocsystem
         UPLOAD_PACKAGES: 'True'
-      osx_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmalloctcmallocpython3.14.____cp314:
-        CONFIG: osx_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmalloctcmallocpython3.14.____cp314
+      osx_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmalloctcmalloc:
+        CONFIG: osx_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmalloctcmalloc
         UPLOAD_PACKAGES: 'True'
-      osx_64_channel_sourcesconda-forgemallocsystempython3.10.____cpython:
-        CONFIG: osx_64_channel_sourcesconda-forgemallocsystempython3.10.____cpython
+      osx_64_channel_sourcesconda-forgemallocsystem:
+        CONFIG: osx_64_channel_sourcesconda-forgemallocsystem
         UPLOAD_PACKAGES: 'True'
-      osx_64_channel_sourcesconda-forgemallocsystempython3.11.____cpython:
-        CONFIG: osx_64_channel_sourcesconda-forgemallocsystempython3.11.____cpython
+      osx_64_channel_sourcesconda-forgemalloctcmalloc:
+        CONFIG: osx_64_channel_sourcesconda-forgemalloctcmalloc
         UPLOAD_PACKAGES: 'True'
-      osx_64_channel_sourcesconda-forgemallocsystempython3.12.____cpython:
-        CONFIG: osx_64_channel_sourcesconda-forgemallocsystempython3.12.____cpython
+      osx_arm64_channel_sourcesconda-forgeconda-forgelabelpython_rcmallocsystem:
+        CONFIG: osx_arm64_channel_sourcesconda-forgeconda-forgelabelpython_rcmallocsystem
         UPLOAD_PACKAGES: 'True'
-      osx_64_channel_sourcesconda-forgemallocsystempython3.13.____cp313:
-        CONFIG: osx_64_channel_sourcesconda-forgemallocsystempython3.13.____cp313
+      osx_arm64_channel_sourcesconda-forgeconda-forgelabelpython_rcmalloctcmalloc:
+        CONFIG: osx_arm64_channel_sourcesconda-forgeconda-forgelabelpython_rcmalloctcmalloc
         UPLOAD_PACKAGES: 'True'
-      osx_64_channel_sourcesconda-forgemalloctcmallocpython3.10.____cpython:
-        CONFIG: osx_64_channel_sourcesconda-forgemalloctcmallocpython3.10.____cpython
+      osx_arm64_channel_sourcesconda-forgemallocsystem:
+        CONFIG: osx_arm64_channel_sourcesconda-forgemallocsystem
         UPLOAD_PACKAGES: 'True'
-      osx_64_channel_sourcesconda-forgemalloctcmallocpython3.11.____cpython:
-        CONFIG: osx_64_channel_sourcesconda-forgemalloctcmallocpython3.11.____cpython
-        UPLOAD_PACKAGES: 'True'
-      osx_64_channel_sourcesconda-forgemalloctcmallocpython3.12.____cpython:
-        CONFIG: osx_64_channel_sourcesconda-forgemalloctcmallocpython3.12.____cpython
-        UPLOAD_PACKAGES: 'True'
-      osx_64_channel_sourcesconda-forgemalloctcmallocpython3.13.____cp313:
-        CONFIG: osx_64_channel_sourcesconda-forgemalloctcmallocpython3.13.____cp313
-        UPLOAD_PACKAGES: 'True'
-      osx_arm64_channel_sourcesconda-forgeconda-forgelabelpython_rcmallocsystempython3.14.____cp314:
-        CONFIG: osx_arm64_channel_sourcesconda-forgeconda-forgelabelpython_rcmallocsystempython3.14.____cp314
-        UPLOAD_PACKAGES: 'True'
-      osx_arm64_channel_sourcesconda-forgeconda-forgelabelpython_rcmalloctcmallocpython3.14.____cp314:
-        CONFIG: osx_arm64_channel_sourcesconda-forgeconda-forgelabelpython_rcmalloctcmallocpython3.14.____cp314
-        UPLOAD_PACKAGES: 'True'
-      osx_arm64_channel_sourcesconda-forgemallocsystempython3.10.____cpython:
-        CONFIG: osx_arm64_channel_sourcesconda-forgemallocsystempython3.10.____cpython
-        UPLOAD_PACKAGES: 'True'
-      osx_arm64_channel_sourcesconda-forgemallocsystempython3.11.____cpython:
-        CONFIG: osx_arm64_channel_sourcesconda-forgemallocsystempython3.11.____cpython
-        UPLOAD_PACKAGES: 'True'
-      osx_arm64_channel_sourcesconda-forgemallocsystempython3.12.____cpython:
-        CONFIG: osx_arm64_channel_sourcesconda-forgemallocsystempython3.12.____cpython
-        UPLOAD_PACKAGES: 'True'
-      osx_arm64_channel_sourcesconda-forgemallocsystempython3.13.____cp313:
-        CONFIG: osx_arm64_channel_sourcesconda-forgemallocsystempython3.13.____cp313
-        UPLOAD_PACKAGES: 'True'
-      osx_arm64_channel_sourcesconda-forgemalloctcmallocpython3.10.____cpython:
-        CONFIG: osx_arm64_channel_sourcesconda-forgemalloctcmallocpython3.10.____cpython
-        UPLOAD_PACKAGES: 'True'
-      osx_arm64_channel_sourcesconda-forgemalloctcmallocpython3.11.____cpython:
-        CONFIG: osx_arm64_channel_sourcesconda-forgemalloctcmallocpython3.11.____cpython
-        UPLOAD_PACKAGES: 'True'
-      osx_arm64_channel_sourcesconda-forgemalloctcmallocpython3.12.____cpython:
-        CONFIG: osx_arm64_channel_sourcesconda-forgemalloctcmallocpython3.12.____cpython
-        UPLOAD_PACKAGES: 'True'
-      osx_arm64_channel_sourcesconda-forgemalloctcmallocpython3.13.____cp313:
-        CONFIG: osx_arm64_channel_sourcesconda-forgemalloctcmallocpython3.13.____cp313
+      osx_arm64_channel_sourcesconda-forgemalloctcmalloc:
+        CONFIG: osx_arm64_channel_sourcesconda-forgemalloctcmalloc
         UPLOAD_PACKAGES: 'True'
   timeoutInMinutes: 360
   variables: {}
