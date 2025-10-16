@@ -8,17 +8,11 @@ jobs:
     vmImage: windows-2022
   strategy:
     matrix:
-      win_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmallocmimalloc:
-        CONFIG: win_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmallocmimalloc
+      win_64_mallocmimalloc:
+        CONFIG: win_64_mallocmimalloc
         UPLOAD_PACKAGES: 'True'
-      win_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmallocsystem:
-        CONFIG: win_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmallocsystem
-        UPLOAD_PACKAGES: 'True'
-      win_64_channel_sourcesconda-forgemallocmimalloc:
-        CONFIG: win_64_channel_sourcesconda-forgemallocmimalloc
-        UPLOAD_PACKAGES: 'True'
-      win_64_channel_sourcesconda-forgemallocsystem:
-        CONFIG: win_64_channel_sourcesconda-forgemallocsystem
+      win_64_mallocsystem:
+        CONFIG: win_64_mallocsystem
         UPLOAD_PACKAGES: 'True'
   timeoutInMinutes: 360
   variables:

@@ -8,29 +8,17 @@ jobs:
     vmImage: macOS-15
   strategy:
     matrix:
-      osx_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmallocsystem:
-        CONFIG: osx_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmallocsystem
+      osx_64_mallocsystem:
+        CONFIG: osx_64_mallocsystem
         UPLOAD_PACKAGES: 'True'
-      osx_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmalloctcmalloc:
-        CONFIG: osx_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmalloctcmalloc
+      osx_64_malloctcmalloc:
+        CONFIG: osx_64_malloctcmalloc
         UPLOAD_PACKAGES: 'True'
-      osx_64_channel_sourcesconda-forgemallocsystem:
-        CONFIG: osx_64_channel_sourcesconda-forgemallocsystem
+      osx_arm64_mallocsystem:
+        CONFIG: osx_arm64_mallocsystem
         UPLOAD_PACKAGES: 'True'
-      osx_64_channel_sourcesconda-forgemalloctcmalloc:
-        CONFIG: osx_64_channel_sourcesconda-forgemalloctcmalloc
-        UPLOAD_PACKAGES: 'True'
-      osx_arm64_channel_sourcesconda-forgeconda-forgelabelpython_rcmallocsystem:
-        CONFIG: osx_arm64_channel_sourcesconda-forgeconda-forgelabelpython_rcmallocsystem
-        UPLOAD_PACKAGES: 'True'
-      osx_arm64_channel_sourcesconda-forgeconda-forgelabelpython_rcmalloctcmalloc:
-        CONFIG: osx_arm64_channel_sourcesconda-forgeconda-forgelabelpython_rcmalloctcmalloc
-        UPLOAD_PACKAGES: 'True'
-      osx_arm64_channel_sourcesconda-forgemallocsystem:
-        CONFIG: osx_arm64_channel_sourcesconda-forgemallocsystem
-        UPLOAD_PACKAGES: 'True'
-      osx_arm64_channel_sourcesconda-forgemalloctcmalloc:
-        CONFIG: osx_arm64_channel_sourcesconda-forgemalloctcmalloc
+      osx_arm64_malloctcmalloc:
+        CONFIG: osx_arm64_malloctcmalloc
         UPLOAD_PACKAGES: 'True'
   timeoutInMinutes: 360
   variables: {}
