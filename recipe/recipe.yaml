@@ -4,7 +4,7 @@ schema_version: 1
 context:
   name: hpx
   version: 1.11.0
-  build_number: 10
+  build_number: 11
 
 recipe:
   name: ${{ name }}
@@ -57,11 +57,9 @@ outputs:
         # - runtime: shared libraries
         # Only list packages whose meta.yaml doesn't contain a run_exports already
         - asio
+        - libboost-devel
         - if: not win
           then: gperftools
-      ignore_run_exports:
-          from_package:
-              - libboost-devel
       run_exports:
         weak:
           - ${{ pin_subpackage("hpx", upper_bound="x.x") }}
@@ -76,7 +74,6 @@ outputs:
             - ${{ compiler('cxx') }}
             - ${{ stdlib("c") }}
             - cmake
-            - libboost-devel
             - if: not win
               then: ninja
         script:
