@@ -8,20 +8,12 @@ jobs:
     vmImage: ubuntu-latest
   strategy:
     matrix:
-      linux_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmallocsystem:
-        CONFIG: linux_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmallocsystem
+      linux_64_mallocsystem:
+        CONFIG: linux_64_mallocsystem
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-      linux_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmalloctcmalloc:
-        CONFIG: linux_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmalloctcmalloc
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-      linux_64_channel_sourcesconda-forgemallocsystem:
-        CONFIG: linux_64_channel_sourcesconda-forgemallocsystem
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-      linux_64_channel_sourcesconda-forgemalloctcmalloc:
-        CONFIG: linux_64_channel_sourcesconda-forgemalloctcmalloc
+      linux_64_malloctcmalloc:
+        CONFIG: linux_64_malloctcmalloc
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
   timeoutInMinutes: 360

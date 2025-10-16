@@ -36,115 +36,59 @@ Current build status
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
-              <td>linux_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmallocsystem</td>
+              <td>linux_64_mallocsystem</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=17801&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/hpx-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmallocsystem" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/hpx-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_mallocsystem" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmalloctcmalloc</td>
+              <td>linux_64_malloctcmalloc</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=17801&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/hpx-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmalloctcmalloc" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/hpx-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_malloctcmalloc" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_channel_sourcesconda-forgemallocsystem</td>
+              <td>osx_64_mallocsystem</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=17801&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/hpx-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_channel_sourcesconda-forgemallocsystem" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/hpx-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_mallocsystem" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_channel_sourcesconda-forgemalloctcmalloc</td>
+              <td>osx_64_malloctcmalloc</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=17801&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/hpx-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_channel_sourcesconda-forgemalloctcmalloc" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/hpx-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_malloctcmalloc" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmallocsystem</td>
+              <td>osx_arm64_mallocsystem</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=17801&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/hpx-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmallocsystem" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/hpx-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_mallocsystem" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmalloctcmalloc</td>
+              <td>osx_arm64_malloctcmalloc</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=17801&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/hpx-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmalloctcmalloc" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/hpx-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_malloctcmalloc" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_channel_sourcesconda-forgemallocsystem</td>
+              <td>win_64_mallocmimalloc</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=17801&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/hpx-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_channel_sourcesconda-forgemallocsystem" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/hpx-feedstock?branchName=main&jobName=win&configuration=win%20win_64_mallocmimalloc" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_channel_sourcesconda-forgemalloctcmalloc</td>
+              <td>win_64_mallocsystem</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=17801&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/hpx-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_channel_sourcesconda-forgemalloctcmalloc" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_arm64_channel_sourcesconda-forgeconda-forgelabelpython_rcmallocsystem</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=17801&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/hpx-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_channel_sourcesconda-forgeconda-forgelabelpython_rcmallocsystem" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_arm64_channel_sourcesconda-forgeconda-forgelabelpython_rcmalloctcmalloc</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=17801&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/hpx-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_channel_sourcesconda-forgeconda-forgelabelpython_rcmalloctcmalloc" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_arm64_channel_sourcesconda-forgemallocsystem</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=17801&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/hpx-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_channel_sourcesconda-forgemallocsystem" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_arm64_channel_sourcesconda-forgemalloctcmalloc</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=17801&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/hpx-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_channel_sourcesconda-forgemalloctcmalloc" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmallocmimalloc</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=17801&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/hpx-feedstock?branchName=main&jobName=win&configuration=win%20win_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmallocmimalloc" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmallocsystem</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=17801&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/hpx-feedstock?branchName=main&jobName=win&configuration=win%20win_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmallocsystem" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_64_channel_sourcesconda-forgemallocmimalloc</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=17801&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/hpx-feedstock?branchName=main&jobName=win&configuration=win%20win_64_channel_sourcesconda-forgemallocmimalloc" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_64_channel_sourcesconda-forgemallocsystem</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=17801&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/hpx-feedstock?branchName=main&jobName=win&configuration=win%20win_64_channel_sourcesconda-forgemallocsystem" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/hpx-feedstock?branchName=main&jobName=win&configuration=win%20win_64_mallocsystem" alt="variant">
                 </a>
               </td>
             </tr>

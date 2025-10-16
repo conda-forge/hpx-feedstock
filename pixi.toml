@@ -25,102 +25,54 @@ description = "List contents of all packages found in rattler-build build direct
 [tasks.build]
 cmd = "rattler-build build --recipe recipe"
 description = "Build hpx-feedstock directly (without setup scripts), no particular variant specified"
-[tasks."build-linux_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmallocsystem"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmallocsystem.yaml"
-description = "Build hpx-feedstock with variant linux_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmallocsystem directly (without setup scripts)"
-[tasks."inspect-linux_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmallocsystem"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmallocsystem.yaml"
-description = "List contents of hpx-feedstock packages built for variant linux_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmallocsystem"
-[tasks."build-linux_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmalloctcmalloc"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmalloctcmalloc.yaml"
-description = "Build hpx-feedstock with variant linux_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmalloctcmalloc directly (without setup scripts)"
-[tasks."inspect-linux_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmalloctcmalloc"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmalloctcmalloc.yaml"
-description = "List contents of hpx-feedstock packages built for variant linux_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmalloctcmalloc"
-[tasks."build-linux_64_channel_sourcesconda-forgemallocsystem"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_channel_sourcesconda-forgemallocsystem.yaml"
-description = "Build hpx-feedstock with variant linux_64_channel_sourcesconda-forgemallocsystem directly (without setup scripts)"
-[tasks."inspect-linux_64_channel_sourcesconda-forgemallocsystem"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_channel_sourcesconda-forgemallocsystem.yaml"
-description = "List contents of hpx-feedstock packages built for variant linux_64_channel_sourcesconda-forgemallocsystem"
-[tasks."build-linux_64_channel_sourcesconda-forgemalloctcmalloc"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_channel_sourcesconda-forgemalloctcmalloc.yaml"
-description = "Build hpx-feedstock with variant linux_64_channel_sourcesconda-forgemalloctcmalloc directly (without setup scripts)"
-[tasks."inspect-linux_64_channel_sourcesconda-forgemalloctcmalloc"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_channel_sourcesconda-forgemalloctcmalloc.yaml"
-description = "List contents of hpx-feedstock packages built for variant linux_64_channel_sourcesconda-forgemalloctcmalloc"
-[tasks."build-osx_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmallocsystem"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmallocsystem.yaml"
-description = "Build hpx-feedstock with variant osx_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmallocsystem directly (without setup scripts)"
-[tasks."inspect-osx_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmallocsystem"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmallocsystem.yaml"
-description = "List contents of hpx-feedstock packages built for variant osx_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmallocsystem"
-[tasks."build-osx_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmalloctcmalloc"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmalloctcmalloc.yaml"
-description = "Build hpx-feedstock with variant osx_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmalloctcmalloc directly (without setup scripts)"
-[tasks."inspect-osx_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmalloctcmalloc"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmalloctcmalloc.yaml"
-description = "List contents of hpx-feedstock packages built for variant osx_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmalloctcmalloc"
-[tasks."build-osx_64_channel_sourcesconda-forgemallocsystem"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_channel_sourcesconda-forgemallocsystem.yaml"
-description = "Build hpx-feedstock with variant osx_64_channel_sourcesconda-forgemallocsystem directly (without setup scripts)"
-[tasks."inspect-osx_64_channel_sourcesconda-forgemallocsystem"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_channel_sourcesconda-forgemallocsystem.yaml"
-description = "List contents of hpx-feedstock packages built for variant osx_64_channel_sourcesconda-forgemallocsystem"
-[tasks."build-osx_64_channel_sourcesconda-forgemalloctcmalloc"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_channel_sourcesconda-forgemalloctcmalloc.yaml"
-description = "Build hpx-feedstock with variant osx_64_channel_sourcesconda-forgemalloctcmalloc directly (without setup scripts)"
-[tasks."inspect-osx_64_channel_sourcesconda-forgemalloctcmalloc"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_channel_sourcesconda-forgemalloctcmalloc.yaml"
-description = "List contents of hpx-feedstock packages built for variant osx_64_channel_sourcesconda-forgemalloctcmalloc"
-[tasks."build-osx_arm64_channel_sourcesconda-forgeconda-forgelabelpython_rcmallocsystem"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_channel_sourcesconda-forgeconda-forgelabelpython_rcmallocsystem.yaml"
-description = "Build hpx-feedstock with variant osx_arm64_channel_sourcesconda-forgeconda-forgelabelpython_rcmallocsystem directly (without setup scripts)"
-[tasks."inspect-osx_arm64_channel_sourcesconda-forgeconda-forgelabelpython_rcmallocsystem"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_channel_sourcesconda-forgeconda-forgelabelpython_rcmallocsystem.yaml"
-description = "List contents of hpx-feedstock packages built for variant osx_arm64_channel_sourcesconda-forgeconda-forgelabelpython_rcmallocsystem"
-[tasks."build-osx_arm64_channel_sourcesconda-forgeconda-forgelabelpython_rcmalloctcmalloc"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_channel_sourcesconda-forgeconda-forgelabelpython_rcmalloctcmalloc.yaml"
-description = "Build hpx-feedstock with variant osx_arm64_channel_sourcesconda-forgeconda-forgelabelpython_rcmalloctcmalloc directly (without setup scripts)"
-[tasks."inspect-osx_arm64_channel_sourcesconda-forgeconda-forgelabelpython_rcmalloctcmalloc"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_channel_sourcesconda-forgeconda-forgelabelpython_rcmalloctcmalloc.yaml"
-description = "List contents of hpx-feedstock packages built for variant osx_arm64_channel_sourcesconda-forgeconda-forgelabelpython_rcmalloctcmalloc"
-[tasks."build-osx_arm64_channel_sourcesconda-forgemallocsystem"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_channel_sourcesconda-forgemallocsystem.yaml"
-description = "Build hpx-feedstock with variant osx_arm64_channel_sourcesconda-forgemallocsystem directly (without setup scripts)"
-[tasks."inspect-osx_arm64_channel_sourcesconda-forgemallocsystem"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_channel_sourcesconda-forgemallocsystem.yaml"
-description = "List contents of hpx-feedstock packages built for variant osx_arm64_channel_sourcesconda-forgemallocsystem"
-[tasks."build-osx_arm64_channel_sourcesconda-forgemalloctcmalloc"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_channel_sourcesconda-forgemalloctcmalloc.yaml"
-description = "Build hpx-feedstock with variant osx_arm64_channel_sourcesconda-forgemalloctcmalloc directly (without setup scripts)"
-[tasks."inspect-osx_arm64_channel_sourcesconda-forgemalloctcmalloc"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_channel_sourcesconda-forgemalloctcmalloc.yaml"
-description = "List contents of hpx-feedstock packages built for variant osx_arm64_channel_sourcesconda-forgemalloctcmalloc"
-[tasks."build-win_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmallocmimalloc"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/win_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmallocmimalloc.yaml"
-description = "Build hpx-feedstock with variant win_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmallocmimalloc directly (without setup scripts)"
-[tasks."inspect-win_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmallocmimalloc"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/win_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmallocmimalloc.yaml"
-description = "List contents of hpx-feedstock packages built for variant win_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmallocmimalloc"
-[tasks."build-win_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmallocsystem"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/win_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmallocsystem.yaml"
-description = "Build hpx-feedstock with variant win_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmallocsystem directly (without setup scripts)"
-[tasks."inspect-win_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmallocsystem"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/win_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmallocsystem.yaml"
-description = "List contents of hpx-feedstock packages built for variant win_64_channel_sourcesconda-forgeconda-forgelabelpython_rcmallocsystem"
-[tasks."build-win_64_channel_sourcesconda-forgemallocmimalloc"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/win_64_channel_sourcesconda-forgemallocmimalloc.yaml"
-description = "Build hpx-feedstock with variant win_64_channel_sourcesconda-forgemallocmimalloc directly (without setup scripts)"
-[tasks."inspect-win_64_channel_sourcesconda-forgemallocmimalloc"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/win_64_channel_sourcesconda-forgemallocmimalloc.yaml"
-description = "List contents of hpx-feedstock packages built for variant win_64_channel_sourcesconda-forgemallocmimalloc"
-[tasks."build-win_64_channel_sourcesconda-forgemallocsystem"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/win_64_channel_sourcesconda-forgemallocsystem.yaml"
-description = "Build hpx-feedstock with variant win_64_channel_sourcesconda-forgemallocsystem directly (without setup scripts)"
-[tasks."inspect-win_64_channel_sourcesconda-forgemallocsystem"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/win_64_channel_sourcesconda-forgemallocsystem.yaml"
-description = "List contents of hpx-feedstock packages built for variant win_64_channel_sourcesconda-forgemallocsystem"
+[tasks."build-linux_64_mallocsystem"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_mallocsystem.yaml"
+description = "Build hpx-feedstock with variant linux_64_mallocsystem directly (without setup scripts)"
+[tasks."inspect-linux_64_mallocsystem"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_mallocsystem.yaml"
+description = "List contents of hpx-feedstock packages built for variant linux_64_mallocsystem"
+[tasks."build-linux_64_malloctcmalloc"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_malloctcmalloc.yaml"
+description = "Build hpx-feedstock with variant linux_64_malloctcmalloc directly (without setup scripts)"
+[tasks."inspect-linux_64_malloctcmalloc"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_malloctcmalloc.yaml"
+description = "List contents of hpx-feedstock packages built for variant linux_64_malloctcmalloc"
+[tasks."build-osx_64_mallocsystem"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_mallocsystem.yaml"
+description = "Build hpx-feedstock with variant osx_64_mallocsystem directly (without setup scripts)"
+[tasks."inspect-osx_64_mallocsystem"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_mallocsystem.yaml"
+description = "List contents of hpx-feedstock packages built for variant osx_64_mallocsystem"
+[tasks."build-osx_64_malloctcmalloc"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_malloctcmalloc.yaml"
+description = "Build hpx-feedstock with variant osx_64_malloctcmalloc directly (without setup scripts)"
+[tasks."inspect-osx_64_malloctcmalloc"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_malloctcmalloc.yaml"
+description = "List contents of hpx-feedstock packages built for variant osx_64_malloctcmalloc"
+[tasks."build-osx_arm64_mallocsystem"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_mallocsystem.yaml"
+description = "Build hpx-feedstock with variant osx_arm64_mallocsystem directly (without setup scripts)"
+[tasks."inspect-osx_arm64_mallocsystem"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_mallocsystem.yaml"
+description = "List contents of hpx-feedstock packages built for variant osx_arm64_mallocsystem"
+[tasks."build-osx_arm64_malloctcmalloc"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_malloctcmalloc.yaml"
+description = "Build hpx-feedstock with variant osx_arm64_malloctcmalloc directly (without setup scripts)"
+[tasks."inspect-osx_arm64_malloctcmalloc"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_malloctcmalloc.yaml"
+description = "List contents of hpx-feedstock packages built for variant osx_arm64_malloctcmalloc"
+[tasks."build-win_64_mallocmimalloc"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/win_64_mallocmimalloc.yaml"
+description = "Build hpx-feedstock with variant win_64_mallocmimalloc directly (without setup scripts)"
+[tasks."inspect-win_64_mallocmimalloc"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/win_64_mallocmimalloc.yaml"
+description = "List contents of hpx-feedstock packages built for variant win_64_mallocmimalloc"
+[tasks."build-win_64_mallocsystem"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/win_64_mallocsystem.yaml"
+description = "Build hpx-feedstock with variant win_64_mallocsystem directly (without setup scripts)"
+[tasks."inspect-win_64_mallocsystem"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/win_64_mallocsystem.yaml"
+description = "List contents of hpx-feedstock packages built for variant win_64_mallocsystem"
 
 [feature.smithy.dependencies]
 conda-smithy = "*"
