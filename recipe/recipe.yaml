@@ -4,7 +4,7 @@ schema_version: 1
 context:
   name: hpx
   version: 1.11.0
-  build_number: 11
+  build_number: 12
 
 recipe:
   name: ${{ name }}
@@ -84,11 +84,11 @@ outputs:
               - run_test.sh
       - package_contents:
           files:
-              - if: win
-                then:
-                    - Library/bin/hpxrun.py
-                else:
-                    - bin/hpxrun.py
+            - if: win
+              then:
+                - Library/bin/hpxrun.py
+              else:
+                - bin/hpxrun.py
 
 about:
   summary: The C++ Standard Library for Parallelism and Concurrency
