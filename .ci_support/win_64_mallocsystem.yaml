@@ -9,10 +9,10 @@ cxx_compiler:
 libboost_devel:
 - '1.88'
 libhwloc:
-- 2.12.2
+- 2.13.0
 malloc:
 - system
 mimalloc:
-- 3.1.5
+- 3.2.8
 target_platform:
 - win-64
