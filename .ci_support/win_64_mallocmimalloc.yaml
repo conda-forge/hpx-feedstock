@@ -7,12 +7,12 @@ channel_targets:
 cxx_compiler:
 - vs2022
 libboost_devel:
-- '1.88'
+- '1.90'
 libhwloc:
 - 2.13.0
 malloc:
 - mimalloc
 mimalloc:
-- 3.2.8
+- 3.3.1
 target_platform:
 - win-64
