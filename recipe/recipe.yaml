@@ -4,7 +4,7 @@ schema_version: 1
 context:
   name: hpx
   version: 1.11.0
-  build_number: 13
+  build_number: 14
 
 recipe:
   name: ${{ name }}
@@ -44,7 +44,8 @@ outputs:
           then: git
           else: ninja
       host:
-        - asio
+        # Starting with Asio 1.33, deprecated code used by HPX-1.11.0 got removed
+        - asio <1.33
         - libboost-devel
         - if: not win
           then: gperftools
@@ -56,7 +57,7 @@ outputs:
         # - build-time: headers, libraries
         # - runtime: shared libraries
         # Only list packages whose meta.yaml doesn't contain a run_exports already
-        - asio
+        - asio <1.33
         - libboost-devel
         - if: not win
           then: gperftools

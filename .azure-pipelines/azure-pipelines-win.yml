@@ -11,9 +11,11 @@ jobs:
       win_64_mallocmimalloc:
         CONFIG: win_64_mallocmimalloc
         UPLOAD_PACKAGES: 'True'
+        store_build_artifacts: false
       win_64_mallocsystem:
         CONFIG: win_64_mallocsystem
         UPLOAD_PACKAGES: 'True'
+        store_build_artifacts: false
   timeoutInMinutes: 360
   variables:
     CONDA_BLD_PATH: D:\\bld\\
