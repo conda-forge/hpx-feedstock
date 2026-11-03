@@ -11,8 +11,8 @@ recipe:
   version: ${{ version }}
 
 source:
-  url: https://github.com/STEllAR-GROUP/hpx/archive/refs/tags/v${{ version }}-rc1.tar.gz
-  sha256: fc7fe3e6b5212646b29f28dd1ee6b79d13e90faa2643fe8f557a82443f66a861
+  url: https://github.com/TheHPXProject/hpx/archive/refs/tags/v${{ version }}.tar.gz
+  sha256: c755ab893e9fdcbc896c6eb735ad411cc78b9314e916d87119c3cd5304928211
 
 build:
   string: ${{ malloc }}_${{ hash }}_${{ build_number }}
@@ -98,9 +98,9 @@ about:
     the C++ Standard APIs to the distributed case.
   license: BSL-1.0
   license_file: LICENSE_1_0.txt
-  homepage: https://github.com/STEllAR-GROUP/hpx
-  repository: https://github.com/STEllAR-GROUP/hpx
-  documentation: https://hpx.stellar-group.org/documentation
+  homepage: https://hpx.dev
+  repository: https://github.com/TheHPXProject/hpx
+  documentation: https://docs.hpx.dev
 
 extra:
   recipe-maintainers:
