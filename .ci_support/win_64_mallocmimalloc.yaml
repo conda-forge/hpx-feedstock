@@ -9,7 +9,7 @@ cxx_compiler:
 libboost_devel:
 - '1.90'
 libhwloc:
-- 2.13.0
+- 2.15.0
 malloc:
 - mimalloc
 mimalloc:
